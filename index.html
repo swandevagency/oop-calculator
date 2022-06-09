@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <container class="container-secion-wrapper">
+        <div class="calculator">
+            <header class="calculater-header-section">
+                <div class="calculater-monitor">
+                    <div previous-number class="previous-number"></div>
+                    <div current-number class="current-number"></div>
+                </div>
+            </header>
+            <keyboard class="calculater-keyboard-section">
+                <div class="calculater-keyboard-number-keys">
+
+                    <div><button class="clear">AC</button></div>
+
+                    <div><button class="delete">DEL</button></div>
+
+                    <div><button class="Decimal">.</button></div>
+
+                    <div><button data-operation class="operator-key" data-ops="plus">+</button></div>
+                    
+                    <div><button data-number class="key-numbers">7</button></div>
+                    <div><button data-number class="key-numbers">8</button></div>
+                    <div><button data-number class="key-numbers">9</button></div>
+                    
+                    <div><button data-operation class="operator-key" data-ops="minus">-</button></div>
+                    
+                    <div><button data-number class="key-numbers">4</button></div>
+                    <div><button data-number class="key-numbers">5</button></div>
+                    <div><button data-number class="key-numbers">6</button></div>
+                    
+                    <div><button data-operation class="operator-key" data-ops="times">*</button></div>
+
+                    <div><button data-number class="key-numbers">1</button></div>
+                    <div><button data-number class="key-numbers">2</button></div>
+                    <div><button data-number class="key-numbers">3</button></div>
+                    
+                    <div><button data-operation class="operator-key" data-ops="divided by">/</button></div>
+
+                    <div><button data-number class="key-numbers">0</button></div>
+
+                    <div class="dontClick">
+                        <p>Please <span style="color:red;">Don't</span> Click</p>
+                    </div>
+                    <div class="Reload-page" onClick="refreshPage()">
+                        <p><span style="color:yellow;">Reload</span> this page</p>
+                    </div>
+
+                    <div><button equal class="equal">=</button></div>
+                </div>
+            </keyboard>
+        </div>
+    </container>
+
+    <script src="function.js"></script>
+</body>
+</html>
