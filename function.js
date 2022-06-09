@@ -4,6 +4,8 @@ const OperatorKey = document.querySelectorAll('[data-operation]')
 const deleteButton = document.querySelector('.delete')
 const allClearButton = document.querySelector('.clear')
 const equal = document.querySelector('.equal')
+const DecimalNum = document.querySelector(".Decimal")
+const error = document.querySelector(".dontClick")
 
 //* importing inputs 
 const previousNumber = document.querySelector('[previous-number]')
@@ -42,6 +44,18 @@ class calculator {
         document.querySelector('.current-number').innerHTML = '';  
         document.querySelector('.previous-number').innerHTML = '';
         console.clear()
+    }
+
+    error(){
+        document.querySelector('.calculator').style.display = "none";
+        document.querySelector('.container-secion-wrapper').innerHTML = "<h1> I Said Don't Click </h1>"
+    }
+
+    decimal(){
+        currentNumber.innerText += '.';
+        if(currentNumber.innerText == '.'){
+            DecimalNum.Disabled == true
+        }
     }
 
     numbers(){
@@ -126,6 +140,10 @@ numberKey.forEach(button => {
     })
 })
 
+DecimalNum.addEventListener('click', () => {
+    calculator.decimal()
+})
+
 OperatorKey.forEach(butOperation => {
     butOperation.addEventListener('click', () => {
         calculator.operate()        
@@ -135,6 +153,11 @@ OperatorKey.forEach(butOperation => {
 equal.addEventListener('click', () => {
     calculator.calculate()
 })
+
+
+error.addEventListener('click', function(){
+    calculator.error()
+})  
 
 function refreshPage(){
     if (confirm('Are you sure you want to reload this page?')){
